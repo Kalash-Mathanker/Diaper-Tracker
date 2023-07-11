@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_iv_diaper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggshell"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_activity_diaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_diaper"
+        tools:ignore="ImageContrastCheck" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_diaper"
+        app:layout_constraintVertical_bias="0.01999998">
+
+        <RadioButton
+            android:id="@+id/main_activity_rb_dirty"
+            style="@style/font_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dirty" />
+
+        <RadioButton
+            android:id="@+id/main_activity_rb_wet"
+            style="@style/font_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/wet" />
+
+        <RadioButton
+            android:id="@+id/main_activity_rb_dry"
+            style="@style/font_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dry" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/main_activity_et_time"
+        style="@style/font_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/time_hint"
+        android:inputType="time"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+    <Button
+        android:id="@+id/main_activity_bt_add"
+        style="@style/font_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/shimmering_blush"
+        android:text="@string/add_diaper"
+        android:textColor="@color/black"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_activity_bt_clear"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_et_time"
+        app:layout_constraintVertical_bias="0.060000002"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/main_activity_bt_clear"
+        style="@style/font_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/shimmering_blush"
+        android:text="@string/clear_all"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_activity_bt_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_activity_bt_add"
+        app:layout_constraintTop_toTopOf="@+id/main_activity_bt_add"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/main_activity_tv_header"
+        style="@style/font_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_bt_clear"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <ScrollView
+        android:id="@+id/main_activity_sv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_diaper_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_header"
+        app:layout_constraintVertical_bias="0.19999999">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/main_activity_iv_baby1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:contentDescription="@string/image"
+                app:srcCompat="@drawable/ic_baby" />
+
+            <TextView
+                android:id="@+id/main_activity_tv_diaper_change"
+                style="@style/font_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/placeholder_tv" />
+
+            <ImageView
+                android:id="@+id/main_activity_iv_baby2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:contentDescription="@string/image"
+                app:srcCompat="@drawable/ic_baby" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/main_activity_diaper_count"
+        style="@style/font_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

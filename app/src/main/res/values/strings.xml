@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Diaper Tracker</string>
+    <string name="content_description">diaphere image</string>
+    <string name="dirty">Dirty</string>
+    <string name="dry">Dry</string>
+    <string name="wet">Wet</string>
+    <string name="time_hint">Enter Time</string>
+    <string name="add_diaper">Add Diaper</string>
+    <string name="clear_all">Clear All</string>
+    <string name="header">--Diaper Tracker--</string>
+    <string name="image">baby image</string>
+    <string name="placeholder_tv"></string>
+</resources>
